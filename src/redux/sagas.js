@@ -11,7 +11,7 @@ function* sagaWorcker(action) {
     const checkOut = action.checkOut
     const checkIn = action.checkIn
     const payload = yield call(() => {
-        return fetch(`http://engine.hotellook.com/api/v2/cache.json?location=${location}&currency=rub&checkIn=${checkIn}&checkOut=${checkOut}&limit=${limit}`)
+        return fetch(`https://engine.hotellook.com/api/v2/cache.json?location=${location}&currency=rub&checkIn=${checkIn}&checkOut=${checkOut}&limit=${limit}`)
                 .then(res => res.json())
     })
     yield put({ type: REQUEST_HOTELS, payload })
