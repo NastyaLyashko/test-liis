@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Route, Switch, useHistory, Redirect } from 'react-router-dom';
 import { createLogin, fetchHotels, addFavouriteHotel, deleteFavouriteHotel } from '../../redux/actionCreator';
 import { useDispatch, useSelector } from 'react-redux';
@@ -47,14 +47,15 @@ function App() {
     return result.toISOString().slice(0, 10);
   }
 
-  const handleSearch = ({location, date, days}) => {
+  const handleSearch = useCallback(({location, date, days}) => {
     setSelectedDate(date)
     setCity(location)
     setDaysCounter(days)
     const checkIn = date;
     const checkOut = checkOutDate(date, days)
     dispatch(fetchHotels(location, checkIn, checkOut))
-  }
+  }, [dispatch, ])
+
   const allCards = useSelector(state => state.hotels.hotelsData)
 
   const allLikedCards = (useSelector(state => state.favourites.favouritesHotelsData))
@@ -77,7 +78,7 @@ function App() {
       handleSearch({ location, date, days })
       history.push('/');
     }
-  }, [history, loggedIn, city, today])
+  }, [history, loggedIn, city, today, handleSearch])
 
   useEffect(() => {
       setCards(allCards)
