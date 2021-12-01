@@ -1,0 +1,11 @@
+.main {
+    position: relative;
+    max-width: 1048px;
+    max-height: 902px;
+    margin: auto;
+    padding: 32px 0px 26px;
+    display: grid;
+    grid-template-columns: 360px 664px;
+    grid-template-rows: 410px 472px;
+    gap: 24px;
+}

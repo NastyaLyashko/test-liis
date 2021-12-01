@@ -7,10 +7,11 @@ const initialState = {
     }
 }
 
-export function reducer (state = initialState, action) {
+export function loginReducer (state = initialState, action) {
     switch(action.type) {
         case ACTION_LOGIN: return { data: action.value };
 
         default: return state;
     }
+
 }

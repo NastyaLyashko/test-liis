@@ -1,0 +1,56 @@
+.favourites {
+    position: relative;
+}
+
+.favourites__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0px;
+}
+
+.favourites__fiters {
+    display: flex;
+    margin: 32px 0px 16px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: -0.408px;
+    color: #99A0A3;
+}
+
+.favourites__fiter {
+    display: flex;
+    align-items: center;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 4px 12.5px 4px 8px;
+    margin-right: 8px;
+}
+
+.favourites__fiter_active {
+    border-color: #41522E;
+    color: #41522E;
+}
+
+.favourites__fiter-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9px;
+    height: 18px;
+}
+
+.favourites__fiter-button {
+    width: 8.49px;
+    height: 5.8px;
+    border:none;
+    padding: 0px;
+    background: url(../../images/filterBtOff.svg) no-repeat;
+}
+
+.favourites__fiter-button_up {
+    background: url(../../images/filterBtOn.svg) no-repeat;
+}

@@ -1,4 +1,6 @@
 .header {
+    max-width: 1440px;
+    margin: auto;
     background: #E5E5E5;
     display: flex;
     justify-content: space-between;
@@ -29,4 +31,8 @@
 
 .header__button:hover {
     cursor: pointer;
+}
+
+.header__button-icon {
+    width: 18px;
 }

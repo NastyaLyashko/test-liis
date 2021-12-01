@@ -1,5 +1,5 @@
 import '../Header/Header.css';
-import logOutImg from '../../images/logOut.png';
+import logOutImg from '../../images/logOut.svg';
 
 function Header ({ logOut }) {
 
@@ -7,7 +7,7 @@ function Header ({ logOut }) {
         <header className="header">
             <h1 className="header__title">Simple Hotel Check</h1>
             <button type='button' onClick={logOut} className="header__button">Выйти
-                <img src={logOutImg} alt='log out'/>
+                <img className="header__button-icon" src={logOutImg} alt='log out'/>
             </button>
         </header>
     )
