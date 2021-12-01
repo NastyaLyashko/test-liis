@@ -25,7 +25,7 @@ function HotelsCardList ({ cards, date, city, hotelsCounter, daysCounter, handle
                 <span className="hotels__date">{date}</span>
             </div>
             <Carousel />
-            <p className="hotels__text">Добавлено в Избранное: <span className="hotels__span">{hotelsCounter}</span> отеля</p>
+            <p className="hotels__text">Добавлено в Избранное: <span className="hotels__count">{hotelsCounter}</span> отеля</p>
             <ul className="hotels__card-list hotels__card-list_main">
                 {listItems}
             </ul>
