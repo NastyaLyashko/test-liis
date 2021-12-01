@@ -82,7 +82,7 @@ function Favourites ({ cards, date, daysCounter, handleLikeCard, handleDeleteCar
                         </div>
                 </div>
             </div>
-            <ul className="hotels__card-list">
+            <ul className="hotels__card-list hotels__card-list_favourites">
                 {listItems}
             </ul>
         </section>

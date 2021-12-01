@@ -61,3 +61,7 @@
     background-color: #41522E;
     border-radius: 2px;
 }
+
+.hotels__card-list_favourites::-webkit-scrollbar{
+    width: 0px;
+}
